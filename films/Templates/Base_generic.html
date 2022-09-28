@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Movies</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="SitePoint">
+
+    <meta property="og:title" content="A Basic HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+        {%block sidebar%}
+        <ul class="sidebar-nav">
+            <li><a href="{% url 'index' %}">home</a></li>
+            <li><a href="{% url 'movies'%}">All movies</a></li>
+            <li><a href="{% url 'directors'%}">All directors</a></li>
+        </ul>
+        {%endblock%}
+        </div>
+        <div class="col-sm-10 ">
+        {%block content%}{%endblock%}
+        </div>
+    </div>
+</div>
+</body>
+</html>

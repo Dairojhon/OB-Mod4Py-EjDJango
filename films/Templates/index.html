@@ -1,0 +1,16 @@
+{% extends "Base_generic.html" %}
+
+{% block content %}
+<h1>Mi proyecto sobre directores y peliculas</h1>
+
+  <p>Bienvenidos <em>a este proyecto</em>, sobre directores y peliculas para Open Bootcamp</p>
+
+<h2>Nuestro contenido</h2>
+
+  <p>Este proyecto cuenta con:</p>
+  <ul>
+    <li><strong>Peliculas:</strong> {{cant_movies}}</li>
+    <li><strong>Directores:</strong> {{cant_directors}}</li>
+  </ul>
+
+{%endblock%}
