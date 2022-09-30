@@ -10,6 +10,7 @@
   <tr>
     <th width="35%">Nombre</th>
     <th>Fecha de nacimiento</th>
+    <th>peliculas</th>
   </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
   <tr>
     <td>{{ nombre }}</td>
     <td>{{ nombre.date_of_birth }}</td>
+    <td><a href="{% url 'movies_detail' nombre.id %}">ver peliculas</a></td>
   </tr>
   {% endfor %}
   </tbody>

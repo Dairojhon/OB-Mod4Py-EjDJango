@@ -1,0 +1,29 @@
+{% extends "Base_generic.html" %}
+
+{% block content %}
+<h1>Recomendamos estas peliculas</h1>
+
+<table class="table table-striped table-hover" , border="1">
+
+  <thead>
+  <tr>
+    <th width="35%">Nombre de pelicula</th>
+    <th>director</th>
+    <th>año</th>
+    <th>resumen</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  {% for nombre in pelicula_detail %}
+  <tr>
+    <td>{{ nombre }}</td>
+    <td>{{ nombre.director }}</td>
+    <td>{{ nombre.year }}</td>
+    <td>{{ nombre.summary }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{%endblock%}

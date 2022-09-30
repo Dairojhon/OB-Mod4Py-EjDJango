@@ -8,7 +8,7 @@ class Directors(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
 
     def get_absolute_url(self):
-        return reverse('director-detail', args=[str(self.id)])
+        return reverse('director_detail', args=[str(self.id)])
 
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)

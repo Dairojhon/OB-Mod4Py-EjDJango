@@ -31,9 +31,6 @@ def directores(request):
 
 def peliculas(request):
     nom_peliculas=Movies.objects.all()
-
-
-
     return render(
         request,
         'movies.html',
@@ -42,3 +39,14 @@ def peliculas(request):
 
         }
     )
+
+def peliculas_director(request,id_director):
+    pelis = Movies.objects.filter(director=id_director)
+
+    return render(request,
+                  'movies_detail.html',
+                  context={
+                      'pelicula_detail':pelis
+                  }
+
+                  )
